@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Read(//cygdrive/c/Users/WolfKali/Desktop/ContractIQ/contractiq/**)",
+      "Bash(dir \"C:/Users/WolfKali/Desktop/ContractIQ/contractiq/public\")",
+      "Bash(ls /c/Users/WolfKali/Desktop/ContractIQ/contractiq/src/app/\\\\\\(dashboard\\\\\\)/settings/)",
+      "Bash(node scripts/generate-icons.mjs)"
+    ]
+  }
+}
