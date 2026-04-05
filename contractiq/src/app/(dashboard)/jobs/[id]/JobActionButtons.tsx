@@ -49,7 +49,7 @@ export default function JobActionButtons({ jobId, estimateId, shareUrl, jobStatu
     <div className="space-y-3 pb-6">
       <Link
         href={`/jobs/${jobId}/estimate`}
-        className="block w-full bg-blue-600 text-white py-3.5 rounded-xl font-semibold text-center hover:bg-blue-700 active:bg-blue-800 transition-colors"
+        className="block w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold text-center hover:bg-slate-800 active:bg-slate-700 transition-colors"
       >
         Edit Estimate
       </Link>

@@ -17,8 +17,8 @@ export default async function DashboardLayout({
   return (
     <div className="min-h-screen bg-gray-50">
       <nav className="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-10">
-        <Link href="/dashboard" className="text-lg font-bold text-blue-600">
-          ContractIQ
+        <Link href="/dashboard" className="text-lg font-bold text-slate-900">
+          WolfXM Propose
         </Link>
         <div className="flex items-center gap-4">
           <Link href="/settings" className="text-sm text-gray-600 hover:text-gray-900">

@@ -204,7 +204,7 @@ export default function NewJobPage() {
       {/* Full-screen loading overlay */}
       {loading && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center gap-8 px-8">
-          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+          <div className="w-16 h-16 border-4 border-slate-900 border-t-transparent rounded-full animate-spin" />
           <div className="text-center space-y-2">
             <p className="text-xl font-bold text-gray-900 transition-all">
               {LOADING_MESSAGES[msgIndex]}
@@ -215,7 +215,7 @@ export default function NewJobPage() {
             {LOADING_MESSAGES.map((_, i) => (
               <div
                 key={i}
-                className={`w-1.5 h-1.5 rounded-full transition-colors ${i === msgIndex ? 'bg-blue-600' : 'bg-gray-200'}`}
+                className={`w-1.5 h-1.5 rounded-full transition-colors ${i === msgIndex ? 'bg-slate-900' : 'bg-gray-200'}`}
               />
             ))}
           </div>
@@ -244,7 +244,7 @@ export default function NewJobPage() {
           {[1, 2, 3, 4].map((s) => (
             <div
               key={s}
-              className={`h-1.5 flex-1 rounded-full transition-colors ${s <= step ? 'bg-blue-600' : 'bg-gray-200'}`}
+              className={`h-1.5 flex-1 rounded-full transition-colors ${s <= step ? 'bg-slate-900' : 'bg-gray-200'}`}
             />
           ))}
         </div>
@@ -260,7 +260,7 @@ export default function NewJobPage() {
                   onClick={() => setJobType(type.value)}
                   className={`p-4 rounded-2xl border-2 text-left transition-all ${
                     jobType === type.value
-                      ? 'border-blue-600 bg-blue-50'
+                      ? 'border-slate-900 bg-slate-50'
                       : 'border-gray-200 bg-white hover:border-gray-300'
                   }`}
                 >
@@ -273,7 +273,7 @@ export default function NewJobPage() {
             <button
               onClick={() => setStep(2)}
               disabled={!canProceedStep1}
-              className="w-full bg-blue-600 text-white py-3.5 rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors mt-2"
+              className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800 transition-colors mt-2"
             >
               Continue
             </button>
@@ -310,7 +310,7 @@ export default function NewJobPage() {
             {photos.length < MAX_PHOTOS && (
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full border-2 border-dashed border-gray-300 rounded-2xl py-10 flex flex-col items-center gap-2 hover:border-blue-400 hover:bg-blue-50 transition-colors"
+                className="w-full border-2 border-dashed border-gray-300 rounded-2xl py-10 flex flex-col items-center gap-2 hover:border-slate-400 hover:bg-slate-50 transition-colors"
               >
                 <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
@@ -342,7 +342,7 @@ export default function NewJobPage() {
               </button>
               <button
                 onClick={() => setStep(3)}
-                className="flex-1 bg-blue-600 text-white py-3.5 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                className="flex-1 bg-slate-900 text-white py-3.5 rounded-xl font-semibold hover:bg-slate-800 transition-colors"
               >
                 Continue {photos.length > 0 && `(${photos.length})`}
               </button>
@@ -365,14 +365,14 @@ export default function NewJobPage() {
               onChange={(e) => setDescription(e.target.value)}
               placeholder="e.g. Foundation has 3 horizontal cracks on the north wall, largest is about 12 feet. Water intrusion visible after rain. Access is tight on the east side. Needs crack injection and waterproofing membrane on exterior."
               rows={6}
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 resize-none"
             />
             <p className="text-xs text-gray-400 -mt-2">{description.length} chars · 10 minimum</p>
 
             <button
               onClick={() => setStep(4)}
               disabled={!canProceedStep3}
-              className="w-full bg-blue-600 text-white py-3.5 rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+              className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800 transition-colors"
             >
               Continue
             </button>
@@ -392,7 +392,7 @@ export default function NewJobPage() {
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="123 Main St, Springfield, IL 62701"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500"
             />
 
             <div className="bg-gray-50 rounded-2xl p-4 space-y-2 text-sm">
@@ -439,7 +439,7 @@ export default function NewJobPage() {
           <button
             onClick={handleGenerate}
             disabled={!canGenerate}
-            className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg disabled:opacity-40 disabled:cursor-not-allowed hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-md"
+            className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800 active:bg-slate-700 transition-colors shadow-md"
           >
             Generate Estimate ✨
           </button>

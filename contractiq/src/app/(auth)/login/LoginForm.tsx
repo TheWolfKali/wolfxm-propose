@@ -34,8 +34,8 @@ export default function LoginForm() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center px-6 py-12">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">ContractIQ</h1>
-          <p className="mt-2 text-gray-500 text-sm">AI-powered proposals in minutes</p>
+          <h1 className="text-3xl font-bold text-gray-900">WolfXM Propose</h1>
+          <p className="mt-2 text-gray-500 text-sm">From job site to signed proposal — in minutes</p>
         </div>
         <h2 className="text-xl font-semibold text-gray-800 mb-6">Sign in to your account</h2>
       </div>
@@ -53,7 +53,7 @@ export default function LoginForm() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               placeholder="you@company.com"
             />
           </div>
@@ -69,7 +69,7 @@ export default function LoginForm() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               placeholder="••••••••"
             />
           </div>
@@ -83,7 +83,7 @@ export default function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-slate-900 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-slate-800 active:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? 'Signing in…' : 'Sign in'}
           </button>
@@ -91,7 +91,7 @@ export default function LoginForm() {
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Don&apos;t have an account?{' '}
-          <Link href="/signup" className="text-blue-600 font-medium hover:underline">
+          <Link href="/signup" className="text-slate-900 font-medium hover:underline">
             Sign up free
           </Link>
         </p>

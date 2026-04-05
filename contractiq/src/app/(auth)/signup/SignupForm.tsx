@@ -94,14 +94,14 @@ export default function SignupForm() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center px-6 py-12">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">ContractIQ</h1>
-          <p className="mt-2 text-gray-500 text-sm">AI-powered proposals in minutes</p>
+          <h1 className="text-3xl font-bold text-gray-900">WolfXM Propose</h1>
+          <p className="mt-2 text-gray-500 text-sm">From job site to signed proposal — in minutes</p>
         </div>
 
         {/* Step indicator */}
         <div className="flex items-center justify-center gap-2 mb-6">
-          <div className={`h-2 w-16 rounded-full ${step === 'account' ? 'bg-blue-600' : 'bg-blue-200'}`} />
-          <div className={`h-2 w-16 rounded-full ${step === 'onboarding' ? 'bg-blue-600' : 'bg-gray-200'}`} />
+          <div className={`h-2 w-16 rounded-full ${step === 'account' ? 'bg-slate-900' : 'bg-slate-300'}`} />
+          <div className={`h-2 w-16 rounded-full ${step === 'onboarding' ? 'bg-slate-900' : 'bg-gray-200'}`} />
         </div>
 
         <h2 className="text-xl font-semibold text-gray-800 mb-6">
@@ -123,7 +123,7 @@ export default function SignupForm() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                 placeholder="you@company.com"
               />
             </div>
@@ -139,7 +139,7 @@ export default function SignupForm() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                 placeholder="Min. 6 characters"
               />
             </div>
@@ -152,7 +152,7 @@ export default function SignupForm() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-blue-700 active:bg-blue-800 transition-colors"
+              className="w-full bg-slate-900 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-slate-800 active:bg-slate-700 transition-colors"
             >
               Continue
             </button>
@@ -169,7 +169,7 @@ export default function SignupForm() {
                 required
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                 placeholder="Smith Construction LLC"
               />
             </div>
@@ -186,7 +186,7 @@ export default function SignupForm() {
                   step="0.01"
                   value={laborRate}
                   onChange={(e) => setLaborRate(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -200,7 +200,7 @@ export default function SignupForm() {
                   max="100"
                   value={markupPct}
                   onChange={(e) => setMarkupPct(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function SignupForm() {
                   type="text"
                   value={zip}
                   onChange={(e) => setZip(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                   placeholder="90210"
                 />
               </div>
@@ -228,7 +228,7 @@ export default function SignupForm() {
                   type="text"
                   value={licenseNo}
                   onChange={(e) => setLicenseNo(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
                   placeholder="Optional"
                 />
               </div>
@@ -243,7 +243,7 @@ export default function SignupForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-full bg-slate-900 text-white py-3 px-4 rounded-xl text-base font-semibold hover:bg-slate-800 active:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? 'Creating account…' : 'Create Account'}
             </button>
@@ -260,7 +260,7 @@ export default function SignupForm() {
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Already have an account?{' '}
-          <Link href="/login" className="text-blue-600 font-medium hover:underline">
+          <Link href="/login" className="text-slate-900 font-medium hover:underline">
             Sign in
           </Link>
         </p>

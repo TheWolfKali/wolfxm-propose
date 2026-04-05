@@ -49,7 +49,7 @@ function ShareModal({ shareUrl, jobAddress, onClose, onShared }: ShareModalProps
     if (typeof navigator !== 'undefined' && 'share' in navigator) {
       try {
         await navigator.share({
-          title: 'Your Proposal from ContractIQ',
+          title: 'Your Proposal from WolfXM Propose',
           text: jobAddress
             ? `Here is your proposal for ${jobAddress}`
             : 'Here is your project proposal',
@@ -90,7 +90,7 @@ function ShareModal({ shareUrl, jobAddress, onClose, onShared }: ShareModalProps
           <p className="text-sm text-gray-600 truncate flex-1">{shareUrl}</p>
           <button
             onClick={copyLink}
-            className="flex-shrink-0 text-blue-600 font-semibold text-sm hover:text-blue-700"
+            className="flex-shrink-0 text-slate-900 font-semibold text-sm hover:text-slate-800"
           >
             {copied ? '✓ Copied' : 'Copy'}
           </button>
@@ -101,7 +101,7 @@ function ShareModal({ shareUrl, jobAddress, onClose, onShared }: ShareModalProps
           {'share' in (typeof navigator !== 'undefined' ? navigator : {}) && (
             <button
               onClick={shareNative}
-              className="w-full bg-blue-600 text-white py-3.5 rounded-xl font-semibold hover:bg-blue-700 active:bg-blue-800 transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-semibold hover:bg-slate-800 active:bg-slate-700 transition-colors flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -353,11 +353,11 @@ export default function EstimatePage() {
         <p className="text-gray-500 text-sm mt-1">The AI may have failed to generate one.</p>
         <button
           onClick={() => router.push(`/jobs/new`)}
-          className="mt-4 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors"
+          className="mt-4 bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-slate-800 transition-colors"
         >
           Try again — new job
         </button>
-        <button onClick={() => router.push('/dashboard')} className="mt-3 block mx-auto text-blue-600 hover:underline text-sm">
+        <button onClick={() => router.push('/dashboard')} className="mt-3 block mx-auto text-slate-900 hover:underline text-sm">
           Back to dashboard
         </button>
       </div>
@@ -403,11 +403,11 @@ export default function EstimatePage() {
 
         {/* AI Summary */}
         {jobSummary && (
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4">
-            <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">AI Summary</p>
-            <p className="text-sm text-blue-900 leading-relaxed">{jobSummary}</p>
+          <div className="bg-slate-50 border border-slate-300 rounded-2xl p-4">
+            <p className="text-xs font-semibold text-slate-900 uppercase tracking-wide mb-1">AI Summary</p>
+            <p className="text-sm text-slate-700 leading-relaxed">{jobSummary}</p>
             {estimate.confidence_note && (
-              <p className="text-xs text-blue-600 mt-2 italic">{estimate.confidence_note}</p>
+              <p className="text-xs text-slate-900 mt-2 italic">{estimate.confidence_note}</p>
             )}
           </div>
         )}
@@ -428,7 +428,7 @@ export default function EstimatePage() {
         <div>
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-semibold text-gray-900">Line Items</h2>
-            <button onClick={addLineItem} className="text-sm text-blue-600 font-medium hover:text-blue-700">
+            <button onClick={addLineItem} className="text-sm text-slate-900 font-medium hover:text-slate-800">
               + Add item
             </button>
           </div>
@@ -441,7 +441,7 @@ export default function EstimatePage() {
                     type="text"
                     value={item.description}
                     onChange={(e) => updateLineItem(i, 'description', e.target.value)}
-                    className="flex-1 text-sm font-medium text-gray-900 border-b border-transparent hover:border-gray-300 focus:border-blue-500 focus:outline-none px-0 py-0.5 bg-transparent"
+                    className="flex-1 text-sm font-medium text-gray-900 border-b border-transparent hover:border-gray-300 focus:border-slate-500 focus:outline-none px-0 py-0.5 bg-transparent"
                   />
                   <button
                     onClick={() => removeLineItem(i)}
@@ -459,7 +459,7 @@ export default function EstimatePage() {
                       type="number"
                       value={item.qty}
                       onChange={(e) => updateLineItem(i, 'qty', parseFloat(e.target.value) || 0)}
-                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-blue-500"
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-slate-500"
                       min="0"
                       step="0.5"
                     />
@@ -470,7 +470,7 @@ export default function EstimatePage() {
                       type="text"
                       value={item.unit}
                       onChange={(e) => updateLineItem(i, 'unit', e.target.value)}
-                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-blue-500"
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-slate-500"
                     />
                   </div>
                   <div>
@@ -479,7 +479,7 @@ export default function EstimatePage() {
                       type="number"
                       value={item.unitPrice}
                       onChange={(e) => updateLineItem(i, 'unitPrice', parseFloat(e.target.value) || 0)}
-                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-blue-500"
+                      className="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-gray-900 focus:outline-none focus:border-slate-500"
                       min="0"
                       step="0.01"
                     />
@@ -506,7 +506,7 @@ export default function EstimatePage() {
                 type="number"
                 value={laborHours}
                 onChange={(e) => setLaborHours(parseFloat(e.target.value) || 0)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-blue-500"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-slate-500"
                 min="0"
                 step="0.5"
               />
@@ -517,7 +517,7 @@ export default function EstimatePage() {
                 type="number"
                 value={laborRate}
                 onChange={(e) => setLaborRate(parseFloat(e.target.value) || 0)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-blue-500"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-slate-500"
                 min="0"
                 step="1"
               />
@@ -529,7 +529,7 @@ export default function EstimatePage() {
         <div className="bg-white border border-gray-200 rounded-xl p-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="font-semibold text-gray-900">Markup</h3>
-            <span className="text-blue-600 font-bold text-lg">{markupPct}%</span>
+            <span className="text-slate-900 font-bold text-lg">{markupPct}%</span>
           </div>
           <input
             type="range"
@@ -537,7 +537,7 @@ export default function EstimatePage() {
             max="50"
             value={markupPct}
             onChange={(e) => setMarkupPct(parseInt(e.target.value))}
-            className="w-full accent-blue-600"
+            className="w-full accent-slate-900"
           />
           <div className="flex justify-between text-xs text-gray-400 mt-1">
             <span>10%</span>
@@ -565,7 +565,7 @@ export default function EstimatePage() {
           </div>
           <div className="border-t border-gray-700 pt-2 mt-2 flex justify-between">
             <span className="text-lg font-bold">Grand Total</span>
-            <span className="text-2xl font-bold text-blue-400">{formatCurrency(totals.grandTotal)}</span>
+            <span className="text-2xl font-bold text-slate-200">{formatCurrency(totals.grandTotal)}</span>
           </div>
         </div>
 
@@ -580,7 +580,7 @@ export default function EstimatePage() {
           <button
             onClick={handleSendToHomeowner}
             disabled={sendLoading || saving}
-            className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-base hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md flex items-center justify-center gap-2"
+            className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-base hover:bg-slate-800 active:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md flex items-center justify-center gap-2"
           >
             {sendLoading ? (
               <>

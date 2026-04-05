@@ -111,17 +111,17 @@ export default function DashboardClient({ initialJobs, userId, pipelineValue: in
         </div>
         <Link
           href="/jobs/new"
-          className="bg-blue-600 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-sm"
+          className="bg-slate-900 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-slate-800 active:bg-slate-700 transition-colors shadow-sm"
         >
           + New Job
         </Link>
       </div>
 
       {/* Pipeline value card */}
-      <div className="bg-blue-600 rounded-2xl p-5 text-white">
-        <p className="text-blue-100 text-sm font-medium">Total Pipeline Value</p>
+      <div className="bg-slate-900 rounded-2xl p-5 text-white">
+        <p className="text-slate-200 text-sm font-medium">Total Pipeline Value</p>
         <p className="text-4xl font-bold mt-1">{formatCurrency(pipeline)}</p>
-        <p className="text-blue-200 text-xs mt-1">Excludes declined proposals</p>
+        <p className="text-slate-300 text-xs mt-1">Excludes declined proposals</p>
       </div>
 
       {/* Jobs list */}
@@ -137,7 +137,7 @@ export default function DashboardClient({ initialJobs, userId, pipelineValue: in
             <p className="text-gray-400 text-sm mt-1">Tap &ldquo;New Job&rdquo; to get started</p>
             <Link
               href="/jobs/new"
-              className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors"
+              className="mt-4 inline-block bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-slate-800 transition-colors"
             >
               Create your first job
             </Link>
@@ -150,7 +150,7 @@ export default function DashboardClient({ initialJobs, userId, pipelineValue: in
                 <Link
                   key={job.id}
                   href={`/jobs/${job.id}`}
-                  className="block bg-white rounded-2xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+                  className="block bg-white rounded-2xl border border-gray-200 p-4 hover:border-slate-300 hover:shadow-sm transition-all"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">

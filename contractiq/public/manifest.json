@@ -1,12 +1,11 @@
 {
-  "name": "ContractIQ",
-  "short_name": "ContractIQ",
-  "description": "AI-powered proposals in minutes",
-  "start_url": "/dashboard",
+  "name": "WolfXM Propose",
+  "short_name": "WolfXM",
+  "description": "From job site to signed proposal — in minutes",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2563eb",
-  "orientation": "portrait",
+  "theme_color": "#0f172a",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }

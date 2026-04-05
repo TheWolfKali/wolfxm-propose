@@ -79,7 +79,7 @@ export default async function ProposalPage({
       <div className="max-w-xl mx-auto px-4 py-6 space-y-5">
 
         {/* Header */}
-        <div className="bg-blue-600 text-white rounded-2xl p-5">
+        <div className="bg-slate-900 text-white rounded-2xl p-5">
           <div className="flex items-start gap-4">
             {co.logo_url ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -94,12 +94,12 @@ export default async function ProposalPage({
               </div>
             )}
             <div className="flex-1 min-w-0">
-              <p className="text-blue-200 text-xs font-medium mb-0.5">Proposal from</p>
+              <p className="text-slate-300 text-xs font-medium mb-0.5">Proposal from</p>
               <h1 className="text-xl font-bold leading-tight">{co.company_name}</h1>
               {co.license_no && (
-                <p className="text-blue-200 text-sm mt-0.5">License #{co.license_no}</p>
+                <p className="text-slate-300 text-sm mt-0.5">License #{co.license_no}</p>
               )}
-              <p className="text-blue-200 text-sm truncate">{co.email}</p>
+              <p className="text-slate-300 text-sm truncate">{co.email}</p>
             </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default async function ProposalPage({
             </div>
             <div className="flex justify-between pt-3 border-t border-gray-200 items-center">
               <span className="text-lg font-bold text-gray-900">Total</span>
-              <span className="text-2xl font-bold text-blue-600">{formatCurrency(grandTotal)}</span>
+              <span className="text-2xl font-bold text-slate-900">{formatCurrency(grandTotal)}</span>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default async function ProposalPage({
         )}
 
         <p className="text-center text-xs text-gray-400 pb-4">
-          Powered by ContractIQ
+          Powered by WolfXM Propose
         </p>
       </div>
     </div>

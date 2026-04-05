@@ -119,7 +119,7 @@ export default function SettingsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-64">
-        <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-slate-900 border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -202,7 +202,7 @@ export default function SettingsPage() {
             value={form.company_name}
             onChange={(e) => setForm((f) => ({ ...f, company_name: e.target.value }))}
             placeholder="Acme Contracting LLC"
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500"
           />
         </div>
 
@@ -213,7 +213,7 @@ export default function SettingsPage() {
             value={form.license_no}
             onChange={(e) => setForm((f) => ({ ...f, license_no: e.target.value }))}
             placeholder="CGC1234567"
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500"
           />
         </div>
 
@@ -224,7 +224,7 @@ export default function SettingsPage() {
             value={form.zip}
             onChange={(e) => setForm((f) => ({ ...f, zip: e.target.value }))}
             placeholder="62701"
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500"
           />
         </div>
       </div>
@@ -244,14 +244,14 @@ export default function SettingsPage() {
             onChange={(e) => setForm((f) => ({ ...f, labor_rate: parseFloat(e.target.value) || 0 }))}
             min="0"
             step="1"
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-slate-500"
           />
         </div>
 
         <div>
           <div className="flex items-center justify-between mb-1.5">
             <label className="text-sm font-medium text-gray-700">Default Markup</label>
-            <span className="text-blue-600 font-bold">{form.markup_pct}%</span>
+            <span className="text-slate-900 font-bold">{form.markup_pct}%</span>
           </div>
           <input
             type="range"
@@ -259,7 +259,7 @@ export default function SettingsPage() {
             max="50"
             value={form.markup_pct}
             onChange={(e) => setForm((f) => ({ ...f, markup_pct: parseInt(e.target.value) }))}
-            className="w-full accent-blue-600"
+            className="w-full accent-slate-900"
           />
           <div className="flex justify-between text-xs text-gray-400 mt-1">
             <span>10%</span>
@@ -271,7 +271,7 @@ export default function SettingsPage() {
       <button
         onClick={handleSave}
         disabled={saving || !form.company_name.trim()}
-        className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-base hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md"
+        className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-base hover:bg-slate-800 active:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md"
       >
         {saving ? 'Saving…' : 'Save Settings'}
       </button>

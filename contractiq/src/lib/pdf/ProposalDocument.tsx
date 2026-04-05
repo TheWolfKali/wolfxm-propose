@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   companyName: {
     fontSize: 22,
     fontFamily: 'Helvetica-Bold',
-    color: '#2563eb',
+    color: '#0f172a',
     marginBottom: 4,
   },
   headerMeta: {
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 6,
     paddingHorizontal: 8,
-    backgroundColor: '#2563eb',
+    backgroundColor: '#0f172a',
     borderRadius: 4,
     marginTop: 4,
   },
@@ -302,7 +302,7 @@ export function ProposalDocument({
         {/* Footer */}
         <View style={styles.footer} fixed>
           <Text style={styles.footerText}>
-            {contractor.company_name} · Powered by ContractIQ
+            {contractor.company_name} · Powered by WolfXM Propose
           </Text>
           <Text
             style={styles.footerText}

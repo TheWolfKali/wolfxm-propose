@@ -174,7 +174,7 @@ export default async function JobDetailPage({
             <h2 className="font-semibold text-gray-900">Estimate</h2>
             <Link
               href={`/jobs/${id}/estimate`}
-              className="text-sm text-blue-600 font-medium hover:text-blue-700"
+              className="text-sm text-slate-900 font-medium hover:text-slate-700"
             >
               Edit
             </Link>
@@ -196,7 +196,7 @@ export default async function JobDetailPage({
           </div>
           <div className="border-t border-gray-100 mt-3 pt-3 flex justify-between">
             <span className="font-bold text-gray-900">Grand Total</span>
-            <span className="font-bold text-blue-600 text-lg">{formatCurrency(estimate.grand_total)}</span>
+            <span className="font-bold text-slate-900 text-lg">{formatCurrency(estimate.grand_total)}</span>
           </div>
         </div>
       ) : (
@@ -204,7 +204,7 @@ export default async function JobDetailPage({
           <p className="text-gray-500 text-sm">No estimate yet</p>
           <Link
             href={`/jobs/${id}/estimate`}
-            className="mt-3 inline-block bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors"
+            className="mt-3 inline-block bg-slate-900 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-slate-800 transition-colors"
           >
             Generate Estimate
           </Link>
@@ -222,7 +222,7 @@ export default async function JobDetailPage({
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Viewed</span>
-              <span className={proposal.viewed_at ? 'text-blue-600 font-medium' : 'text-gray-400'}>
+              <span className={proposal.viewed_at ? 'text-slate-900 font-medium' : 'text-gray-400'}>
                 {proposal.viewed_at ? formatDate(proposal.viewed_at) : 'Not yet'}
               </span>
             </div>
@@ -235,7 +235,7 @@ export default async function JobDetailPage({
             {shareUrl && (
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-gray-500 mb-1">Share link</p>
-                <p className="text-xs text-blue-600 break-all">{shareUrl}</p>
+                <p className="text-xs text-slate-900 break-all">{shareUrl}</p>
               </div>
             )}
           </div>

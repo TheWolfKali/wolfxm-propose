@@ -3,13 +3,13 @@ import "./globals.css";
 import OfflineBanner from "@/components/OfflineBanner";
 
 export const metadata: Metadata = {
-  title: "ContractIQ — AI Proposals for Contractors",
-  description: "Take job site photos, get a professional scoped proposal in under 3 minutes.",
+  title: "WolfXM Propose",
+  description: "From job site to signed proposal — in minutes",
   manifest: "/manifest.json",
   other: {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "ContractIQ",
+    "apple-mobile-web-app-title": "WolfXM",
   },
 };
 
@@ -18,7 +18,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: "#2563eb",
+  themeColor: "#0f172a",
 };
 
 export default function RootLayout({
