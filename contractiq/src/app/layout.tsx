@@ -6,9 +6,16 @@ export const metadata: Metadata = {
   title: "WolfXM Propose",
   description: "From job site to signed proposal — in minutes",
   manifest: "/manifest.json",
+  icons: {
+    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
   other: {
     "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": "WolfXM",
   },
 };
